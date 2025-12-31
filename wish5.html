@@ -115,6 +115,8 @@
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            -webkit-tap-highlight-color: rgba(16, 185, 129, 0.3);
+            touch-action: manipulation;
         }
 
         .btn:hover {
@@ -127,12 +129,16 @@
         }
 
         @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
             .container {
-                padding: 40px 25px;
+                padding: 35px 20px;
             }
 
             h1 {
-                font-size: 1.8em;
+                font-size: 1.7em;
             }
 
             .emoji {
@@ -140,12 +146,38 @@
             }
 
             .wish-text {
-                font-size: 1.05em;
+                font-size: 1em;
+                line-height: 1.7;
             }
 
             .btn {
-                padding: 15px 40px;
+                padding: 16px 35px;
                 font-size: 1.1em;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                padding: 30px 18px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .emoji {
+                font-size: 3.5em;
+            }
+
+            .wish-text {
+                font-size: 0.95em;
+            }
+
+            .btn {
+                padding: 14px 30px;
+                font-size: 1em;
             }
         }
     </style>
