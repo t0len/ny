@@ -171,6 +171,8 @@
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            -webkit-tap-highlight-color: rgba(236, 72, 153, 0.3);
+            touch-action: manipulation;
         }
 
         .btn:hover {
@@ -183,37 +185,105 @@
         }
 
         @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
             .container {
-                padding: 40px 25px;
+                padding: 40px 22px;
+            }
+
+            .counter {
+                font-size: 0.9em;
+                padding: 8px 18px;
             }
 
             h1 {
-                font-size: 2em;
+                font-size: 1.9em;
+                margin-bottom: 20px;
             }
 
             .emoji {
-                font-size: 5em;
+                font-size: 4.5em;
+                margin-bottom: 20px;
             }
 
             .wish-text {
-                font-size: 1.05em;
+                font-size: 1em;
+                line-height: 1.8;
+                margin-bottom: 25px;
+            }
+
+            .divider {
+                font-size: 1.8em;
+                margin: 25px 0;
             }
 
             .final-message {
-                padding: 25px 20px;
+                padding: 28px 22px;
+                margin-top: 25px;
             }
 
             .final-message h2 {
-                font-size: 1.6em;
+                font-size: 1.5em;
+                margin-bottom: 15px;
             }
 
             .final-message p {
                 font-size: 1em;
+                line-height: 1.7;
+                margin-bottom: 12px;
+            }
+
+            .signature {
+                font-size: 1.3em;
+                margin-top: 20px;
             }
 
             .btn {
-                padding: 15px 35px;
+                padding: 16px 35px;
                 font-size: 1em;
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                padding: 35px 18px;
+            }
+
+            h1 {
+                font-size: 1.6em;
+            }
+
+            .emoji {
+                font-size: 4em;
+            }
+
+            .wish-text {
+                font-size: 0.95em;
+            }
+
+            .final-message {
+                padding: 25px 18px;
+            }
+
+            .final-message h2 {
+                font-size: 1.3em;
+            }
+
+            .final-message p {
+                font-size: 0.95em;
+            }
+
+            .signature {
+                font-size: 1.2em;
+            }
+
+            .btn {
+                padding: 14px 30px;
+                font-size: 0.95em;
             }
         }
     </style>
