@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пожелание 4 из 6 🌈</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde047 50%, #fbcfe8 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .snowflake {
+            position: fixed;
+            top: -10px;
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1.5em;
+            opacity: 0.9;
+            pointer-events: none;
+            z-index: 1;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 30px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 60px rgba(253, 224, 71, 0.5);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            border: 3px solid #fbbf24;
+            animation: slideIn 0.8s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .counter {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b, #eab308);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .emoji {
+            font-size: 6em;
+            margin-bottom: 20px;
+            animation: rainbow 5s linear infinite;
+        }
+
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        h1 {
+            color: #ea580c;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            font-weight: 900;
+        }
+
+        .wish-text {
+            color: #92400e;
+            font-size: 1.15em;
+            line-height: 1.9;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 50px;
+            background: linear-gradient(135deg, #f59e0b, #eab308);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.6);
+        }
+
+        .btn:active {
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 25px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .emoji {
+                font-size: 4em;
+            }
+
+            .wish-text {
+                font-size: 1.05em;
+            }
+
+            .btn {
+                padding: 15px 40px;
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="counter">4 из 6</div>
+        <div class="emoji">🌈</div>
+        <h1>Безграничное счастье</h1>
+        <p class="wish-text">
+            Желаю тебе быть по-настоящему счастливой! 
+            Пусть каждый день приносит радость, каждое утро — новые надежды, 
+            а каждый вечер — приятные воспоминания. Улыбайся чаще и наслаждайся жизнью! 😊💕
+        </p>
+        <a href="wish5.html" class="btn">Продолжай радовать! 🌸</a>
+    </div>
+
+    <script>
+        function createSnow() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.textContent = '❄';
+            snowflake.style.left = Math.random() * 100 + '%';
+            snowflake.style.fontSize = (Math.random() * 1 + 0.6) + 'em';
+            snowflake.style.animationDuration = (Math.random() * 3 + 5) + 's';
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => snowflake.remove(), 8000);
+        }
+
+        setInterval(createSnow, 400);
+    </script>
+</body>
+</html>
