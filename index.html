@@ -107,6 +107,8 @@
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            -webkit-tap-highlight-color: rgba(236, 72, 153, 0.3);
+            touch-action: manipulation;
         }
 
         .btn:hover {
@@ -119,6 +121,10 @@
         }
 
         @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
             .container {
                 padding: 40px 25px;
             }
@@ -128,16 +134,42 @@
             }
 
             .emoji {
+                font-size: 4.5em;
+            }
+
+            .message {
+                font-size: 1.05em;
+                line-height: 1.7;
+            }
+
+            .btn {
+                padding: 16px 35px;
+                font-size: 1.15em;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                padding: 35px 20px;
+            }
+
+            h1 {
+                font-size: 1.7em;
+            }
+
+            .emoji {
                 font-size: 4em;
             }
 
             .message {
-                font-size: 1.1em;
+                font-size: 1em;
             }
 
             .btn {
-                padding: 15px 40px;
-                font-size: 1.1em;
+                padding: 14px 30px;
+                font-size: 1.05em;
             }
         }
     </style>
